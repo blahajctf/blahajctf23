@@ -1,0 +1,38 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Web Lover"
+author: "iamnumber4"
+category: web
+description: |
+    > Guess blahaj's favourite website and he will give you the flag!
+
+# Dynamic Scoring Moments
+# Value: Initial points
+# Decay: How many solves before minimum
+# Minimum: Minimum points
+value: 500
+type: dynamic
+decay: 40
+minimum: 100
+
+# The flag to use
+flags:
+    - blahaj{x55_exi5t5_n0t_ju5t_in_scr1pt}
+
+# Link all files in dist
+files:
+    - dist/dist.zip
+
+# Sample Link if necessary
+connection_info: nc hostname 12345
+
+# The state of the challenge.
+# If the field is omitted, the challenge is visible by default.
+# If provided, the field can take one of two values: hidden, visible.
+state: visible
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

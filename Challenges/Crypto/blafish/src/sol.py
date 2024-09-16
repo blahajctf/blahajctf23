@@ -1,0 +1,12 @@
+from Crypto.Util.number import long_to_bytes
+ct = long_to_bytes(0x54dcd0c45e04af6415abbfbddb32d64e59c30237c578c15dfd2ec1a27ed3bf24638b44f219aefd3d6e6778f7d961c28b2857c64bb99bc573cf36a29225740f4163c93d0e8c499ad1f17e43f167b443334528213c747eeb98f17e43f167b443333e6bc2c70887611a0ade4058829ca5b2cf36a29225740f4163c93d0e8c499ad14e1ebb464b67ce64fe07c27846841b0f37b5ae3cd1e3a49e52beb963b4d37903ed67078a0abb8f894528213c747eeb986b9bda5d79a7275e08c76e2cad49538c4e1ebb464b67ce648caffff77b9f3f16ec230885c67c2fb66b9bda5d79a7275e63c93d0e8c499ad152beb963b4d3790350b228e75b37184eec230885c67c2fb66b9bda5d79a7275ecf36a29225740f4163c93d0e8c499ad14e1ebb464b67ce64fe07c27846841b0f4528213c747eeb98f17e43f167b4433352beb963b4d3790353f738aa8650c5ad)
+
+a = []
+
+for k in range(len(ct)//8):
+    a.append(ct[8*k:8*(k+1)])
+
+import pandas as pd
+b = pd.Series(a)
+
+print("".join(b.replace(dict(zip(b.unique(), "abcdefghijklmnopqrstuvwxyz"[:b.unique().size]))))[7:])

@@ -1,0 +1,36 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Printwriter -1"
+author: "azazo"
+category: misc
+description: |
+    I'm not very good at C, so I coded this challenge in Python. Don't have Python 3 yet though, so it's a bit slow... At least it can't be pwned now!
+
+
+# Dynamic Scoring Moments
+# Value: Initial points
+# Decay: How many solves before minimum
+# Minimum: Minimum points
+value: 500
+type: dynamic
+decay: 40
+minimum: 100
+
+# The flag to use
+flags:
+    - blahaj{0uT_w17h_th3_N3W_4Nd_1N_w1tH_the_Old}
+
+# Link all files in dist
+files:
+    - dist/main.py
+
+# The state of the challenge.
+# If the field is omitted, the challenge is visible by default.
+# If provided, the field can take one of two values: hidden, visible.
+state: visible
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

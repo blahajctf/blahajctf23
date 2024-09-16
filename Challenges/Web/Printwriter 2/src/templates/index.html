@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="/static/form.js"></script>
+    </head>
+    <body>
+        <h1> Welcome to Printwriter! </h1>
+        <form action="/print" method="POST" class="report-form">
+            <label for="count"> Print how many times: </label>
+            <input type="number" id="count" name="count" placeholder="5" required>
+            <textarea id="message" name="message" placeholder="The quick brown fox jumps over the lazy dog" rows="12" required></textarea>
+            <button type="submit">Print!</button>
+        </form>
+    </body>
+</html>

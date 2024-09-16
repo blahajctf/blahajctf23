@@ -1,0 +1,24 @@
+<html><body><script>
+(()=>{
+    const site = (new URLSearchParams(location.search)).get("site");
+    const favorite = localStorage.getItem("favorite_site");
+    if(!site){
+        localStorage.setItem("favorite_site", "blahaj{not_the_flag}");
+        document.write("Guess my favorite site and i'll give you the flag!");
+        return;
+    }else{
+        if(site.length > 200){
+            document.write('Too long!!');
+            return;
+        }
+        const guesses = site.split(" ");
+        for(const guess of guesses){
+            if(favorite.includes(guess)){
+                document.write('yep! '+site+' is a good guess!!');
+                return;
+            }
+        }
+        document.write('nope! :(');
+    }
+})();
+</script></body></html>

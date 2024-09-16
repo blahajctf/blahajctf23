@@ -1,0 +1,18 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Looking for Blahaj"
+author: "Halogen"
+category: forensics
+description: |
+    > I am playing hide and seek with my Blahaj. I was told it was hiding somewhere in this image, but where?
+
+
+# The flag to use
+flags:
+    - blahaj{n0_M0r3_h1d1n6_F0r_bl4h4j}
+
+# Link all files in dist
+files:
+    - dist/findme.jfif

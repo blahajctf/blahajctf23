@@ -1,0 +1,58 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.search-bar {
+    display: block;
+    margin: 25px auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: min(780px, calc(70vw - 20px));
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #009879;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.alert-simple {
+    width: min(780px, calc(70vw - 20px));
+    margin: 25px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    text-shadow: 2px 1px #00040a;
+    transition: 0.5s;
+    font-family: "Consolas", sans-serif;
+}
+
+.alert-simple.alert-success {
+    border: 1px solid rgba(36, 241, 6, 0.46);
+    background-color: rgba(7, 149, 66, 0.25);
+    box-shadow: 0px 0px 2px #259c08;
+    color: #0ad406;
+}
+
+.alert-simple.alert-error {
+    border: 1px solid rgba(241, 6, 6, 0.81);
+    background-color: rgba(220, 17, 1, 0.25);
+    box-shadow: 0px 0px 2px #ff0303;
+    color: #ff0303;
+}
+
+.alert-error:hover {
+    background-color: rgba(220, 17, 1, 0.33);
+    transition: 0.5s;
+}
+
+.alert:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: calc(100% - 44px);
+    border-left: 1px solid;
+    border-right: 2px solid;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 20px;
+}

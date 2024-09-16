@@ -1,0 +1,14 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Remote Conda Executor"
+author: "Halogen"
+category: misc
+description: |
+    Blahaj just made his very first Python Shell Emulator as part of a school graded assignment, and says no one can hack it. Prove him wrong.
+
+
+# The flag to use
+flags:
+    - blahaj{oops_should_have_filtered_eval}

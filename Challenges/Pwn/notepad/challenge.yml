@@ -1,0 +1,21 @@
+name: Notepad
+author: samuzora
+category: pwn
+description: What kinda lousy notepad is this? Gonna go back to neovim...
+
+value: 500
+type: dynamic
+decay: 40
+minimum: 100
+
+flags:
+  - blahaj{4rb_r3ad_4rb_wr1te_and_rc3_in_on3??}
+
+files:
+  - dist/libc-2.31.so
+  - dist/notepad
+
+connection_info: nc hostname 12345
+
+state: visible
+version: "0.1"

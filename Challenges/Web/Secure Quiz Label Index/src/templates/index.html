@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Secure Quiz Label Index</title>
+
+	<link href="/static/table.css" rel="stylesheet">
+	<link href="/static/navbar.css" rel="stylesheet">
+	<link href="/static/search-bar.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>body {background-color: #121212;}</style>
+</head>
+</body>
+
+<div class="topnav">
+    <div style="cursor: pointer; display: inline;" onclick="window.location.href = '/'">
+        <b style='color: white; font-family: "Helvetica"; font-style: italic;'>SECURE QUIZ LABEL INDEX</b>
+        <i class="fa fa-check-square-o" style="color: white"></i>
+    </div>
+</div>
+
+
+<div style="margin-top: 20px;">
+    <form method="POST">
+        <input class="search-bar" placeholder="Search for a Quiz!" name="query" value="{{query}}"></input>
+    </form>
+    
+    {% with messages = get_flashed_messages(with_categories = True) %}
+    {% if messages %}
+    {% for category, message in messages %}
+        <div
+            class="alert alert-simple alert-{{category}}">
+            {% if category == "error" %}
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            {% elif category == "success" %}
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            {% endif %}
+            <strong class="font__weight-semibold">{{message.split("\n")[0]}}</strong><br> {{message.split("\n")[1]}}
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Question</th>
+                <th>Setter</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for quiz in quizzes %}
+            <tr>
+                <td>{{ quiz[0] }}</td>
+                <td>{{ quiz[1] }}</td>
+                <td>{{ quiz[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+</html>

@@ -1,0 +1,14 @@
+# Required sections
+name: "Secure Quiz Label Index"
+author: "Halogen"
+category: web
+description: |
+    > Halogen has just released all the questions to the next CyberSecurity test. Blahaj wants to score full marks, and believes the answers and bonus questions are listed somewhere on the site. Help Blahaj get the answers and score full marks on this quiz!
+
+# The flag to use
+flags:
+    - blahaj{full_m4rk5_guar4nte3d!!}
+
+# Link all files in dist
+files:
+    - dist/dist.zip
